@@ -1,7 +1,17 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
+<div>
+    Witaj w ASP.NET!
+    @{ 
+        foreach (var album in ViewBag.Albumy)
+        {
+            <p>
+                @album.Artist, @album.AlbumName
+            </p>
+        }
+    }
+</div>
 <div class="jumbotron">
     <h1>ASP.NET - krawat10</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>

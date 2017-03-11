@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Blog.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,15 @@ namespace Blog.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index(string id)
+        public ActionResult Index()
         {
-            return "Witaj" + id;
+            var albumy = new List<Album>
+            {
+                new Album {Artist = "U2", AlbumName = "Nowhere to go" },
+                new Album {Artist = "Peja", AlbumName = "Policja" }
+            };
+            ViewBag.Albumy = albumy;
+            return View();
         }
 
         public ActionResult About()
