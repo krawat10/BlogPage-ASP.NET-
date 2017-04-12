@@ -33,5 +33,10 @@ namespace Blog.Controllers
 
             return View();
         }
+
+        public ActionResult Paint()
+        {
+            return View();
+        }
     }
 }
